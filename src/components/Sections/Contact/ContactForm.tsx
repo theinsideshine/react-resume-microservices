@@ -1,7 +1,5 @@
 import {FC, memo, useCallback, useMemo, useState, useEffect} from 'react';
-//import { render } from '@react-email/render';
-//import sendgrid from '@sendgrid/mail';
-//import  Email  from './email';
+
 
 import { fetchWithoutToken } from '../../../helpers/fetch';
 import  Swal from 'sweetalert2';
@@ -17,8 +15,7 @@ interface FormData {
   message: string;
 }
 
-/* const SENDGRID_API_KEY='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';
-sendgrid.setApiKey(SENDGRID_API_KEY); */
+
 
 const ContactForm: FC = memo(() => {
 
