@@ -35,7 +35,7 @@ const ContactForm: FC = memo(() => {
     
     const ApiCall = async () => {    
 
-      const response = await fetchWithoutToken('contact',0,'GET');
+      const response = await fetchWithoutToken('section/contact/data',0,'GET');
       const body = await response.json();                          
 
     console.log(body);

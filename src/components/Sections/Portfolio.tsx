@@ -80,7 +80,7 @@ useEffect(() => {
 
   const ApiCall = async () => {    
 
-    const response = await fetchWithoutToken('portfolio',0,'GET');
+    const response = await fetchWithoutToken('section/portfolio/data',0,'GET');
     const body = await response.json();                          
 
    console.log(body);

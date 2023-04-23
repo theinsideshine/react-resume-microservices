@@ -30,12 +30,20 @@ const Contact: FC = memo(() => {
 
   const [contactoTextoEncabezado, setContactoTextoEncabezado]= useState('');
   const [contactoDescripcion, setContactoDescripcion]= useState('');
+  const [contactoEmail, setContactoEmail]= useState('');
+  const [contactoLugar, setContactoLugar]= useState('');
+  const [contactoLugarLink, setContactoLugarLink]= useState('');
+  const [contactoIg, setContactoIg]= useState('');
+  const [contactoIgLink, setContactoIgLink]= useState('');
+  const [contactoGithub, setContactoGithub]= useState('');
+  const [contactoGithubLink, setContactoGithubLink]= useState('');
+  
 
   useEffect(() => {
     
     const ApiCall = async () => {    
 
-      const response = await fetchWithoutToken('contact',0,'GET');
+      const response = await fetchWithoutToken('section/contact/data',0,'GET');
       const body = await response.json();                          
 
     console.log(body);
@@ -43,10 +51,14 @@ const Contact: FC = memo(() => {
       if(response.status === 200) {  
         
         setContactoTextoEncabezado(body.contactoTextoEncabezado); 
-        setContactoDescripcion(body.contactoDescripcion);   
-        
-
-        
+        setContactoDescripcion(body.contactoDescripcion); 
+        setContactoEmail(body.contactoEmail);
+        setContactoLugar(body.contactoLugar);
+        setContactoLugarLink(body.contactoLugarLink);
+        setContactoIg(body.contactoIg);
+        setContactoIgLink(body.contactoIgLink);
+        setContactoGithub(body.contactoGithub);
+        setContactoGithubLink(body.contactoGithubLink);       
       
       } else {
         console.error('error en fetch');
@@ -62,23 +74,23 @@ const Contact: FC = memo(() => {
     items: [
       {
         type: ContactType.Email,
-        text: 'pablo.tavolaro@gmail.com',
-        href: 'mailto:pablo.tavolaro@gmail.com',
+        text: contactoEmail,
+        href: 'mailto:'+contactoEmail,
       },
       {
         type: ContactType.Location,
-        text: 'Buenos Aires Caba, Argentina',
-        href: 'https://goo.gl/maps/i4UvTVHGuZoH2X8r9',
+        text: contactoLugar,
+        href: contactoLugarLink,
       },
       {
         type: ContactType.Instagram,
-        text: '@educacion.ta',
-        href: 'https://www.instagram.com/educacion.ta/',
+        text: contactoIg,
+        href: contactoIgLink,
       },
       {
         type: ContactType.Github,
-        text: 'theinsideshine',
-        href: 'https://github.com/theinsideshine',
+        text: contactoGithub,
+        href: contactoGithubLink,
       },
     ],
   };

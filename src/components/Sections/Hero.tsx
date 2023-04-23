@@ -33,6 +33,7 @@ const Hero: FC = memo(() => {
     const ApiCall = async () => {    
 
       const response = await fetchWithoutToken('section/hero/data',0,'GET');
+      //const response = await fetchWithoutToken('hero',0,'GET');
       const body = await response.json();                          
 
      console.log(body);
