@@ -90,7 +90,7 @@ const ContactForm: FC = memo(() => {
 
  
       console.log('Data to send: ', data);
-      const response = await fetchWithoutToken('sendEmail',data,'PUT');             
+      const response = await fetchWithoutToken('sendEmail/',data,'PUT');             
               //const body = await response.json(); 
 
               if(response.status === 200) {             

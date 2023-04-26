@@ -42,7 +42,7 @@ const About: FC = memo(() => {
     const ApiCall = async () => {    
 
       const response = await fetchWithoutToken('section/about/data',0,'GET');
-      //const response = await fetchWithoutToken('about',0,'GET');
+      
       const body = await response.json();                          
 
      console.log(body);

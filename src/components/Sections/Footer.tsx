@@ -17,7 +17,8 @@ const Footer: FC = memo(() => (
       <div className="flex gap-x-4 text-neutral-500">
         <Socials />
       </div>
-      <span className="text-sm text-neutral-700">© Copyright 2023</span>
+      <span className="text-sm text-neutral-700">© Copyright 2023-Based on the free project by tbakerx</span>
+      <span className="text-sm text-neutral-700">https://github.com/tbakerx/react-resume-template</span>
     </div>
   </div>
 ));

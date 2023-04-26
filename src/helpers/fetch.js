@@ -1,6 +1,7 @@
 
-const baseUrl =  'http://localhost:8002' ;
-//const baseUrl =  'http://localhost:8080/api/en' ;
+const baseUrl =  'http://localhost:8002';
+
+
 
 const fetchWithoutToken = ( endpoint, data, method = 'GET' ) => {
 
