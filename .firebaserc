@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "resume-ptavolaro"
-  }
+    "default": "react-config-resume-builder",
+    "react-config-resume-builder": "react-config-resume-builder"
+  },
+  "targets": {}
 }
