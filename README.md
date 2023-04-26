@@ -8,7 +8,7 @@ The free project of tbakerx was used as a base,
 In it, the data of the sections and users are static, necessary modifications were added so that the data is brought from a backend.
 
 
-![](images/hooks.gif)
+![](images/hook.gif)
 
 Hero Section
 Added the download of the resume in pdf format in English or Spanish
