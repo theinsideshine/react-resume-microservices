@@ -1,6 +1,6 @@
 
-const baseUrl =  'http://localhost:8002';
-
+//const baseUrl =  'http://localhost:8002';
+const baseUrl = 'http://ec2-18-234-133-94.compute-1.amazonaws.com:8002'
 
 
 const fetchWithoutToken = ( endpoint, data, method = 'GET' ) => {
